@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:titleTextColor="@color/white"
+        android:elevation="55dp"
+        android:background="@color/black"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/confirmed_filter_icon"/>
+            <TextView
+                android:id="@+id/textView_confirmed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmed"
+                android:textColor="@color/textColor"
+                android:paddingStart="25dp"
+                android:paddingEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/deaths_filter_icon"/>
+            <TextView
+                android:id="@+id/textView_deaths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deaths"
+                android:textColor="@color/textColor"
+                android:paddingStart="25dp"
+                android:paddingEnd="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/recovered_filter_icon"/>
+            <TextView
+                android:id="@+id/textView_recovered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/recovered"
+                android:textColor="@color/textColor"
+                android:paddingStart="25dp"
+                android:paddingEnd="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@id/linear"
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/shadow" />
+
+        <TextView
+        android:layout_below="@id/divider2"
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/global"
+            android:textColor="@color/textColor"
+            android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toEndOf="@id/divider"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/divider2"
+        android:layout_margin="5dp"
+        android:id="@+id/textView_totalCases"
+        android:textAlignment="textEnd"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_totalCases"
+        android:orientation="horizontal"
+        android:id="@+id/linear_2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_new_confirmed"
+            android:textColor="#CE8E23"
+            android:elevation="5dp"
+            android:textSize="12sp"
+            android:layout_marginStart="30dp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="25dp"
+            android:id="@+id/textView_new_deaths"
+            android:textColor="#EC0000"
+            android:elevation="5dp"
+            android:textSize="12sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="25dp"
+            android:id="@+id/textView_new_recovered"
+            android:textColor="#189D1E"
+            android:textSize="12sp"
+            android:elevation="5dp"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_2"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:id="@+id/linear_1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/confirmed_round_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_totalConfirmed"
+                android:textColor="@color/textColor"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/deaths_round_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_TotalDeaths"
+                android:textColor="@color/textColor"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/recovered_round_icon"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_totalRecovered"
+                android:textColor="@color/textColor"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_"
+        android:layout_below="@id/linear_1"
+        android:textAlignment="textEnd"
+        android:textColor="@color/textColor"
+        android:layout_margin="5dp"/>
+
+    <View
+        android:layout_below="@id/date_"
+        android:id="@+id/divider3"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/shadow" />
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_below="@id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefresh">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView_country_list"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <ProgressBar
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:elevation="10dp"
+            android:id="@+id/progress_circular"/>
+
+</RelativeLayout>

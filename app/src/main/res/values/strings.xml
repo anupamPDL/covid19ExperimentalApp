@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Covid19App</string>
+    <string name="global_cases">Global</string>
+    <string name="new_confirmed">New Confirmed</string>
+    <string name="total_confirmed">Confirmed</string>
+    <string name="total_deaths">Deaths</string>
+    <string name="new_deaths">New Deaths</string>
+    <string name="total_recovered">Recovered</string>
+    <string name="new_recovered">New Recovered</string>
+    <string name="cases">Total Cases</string>
+    <string name="people">People</string>
+    <string name="total">Total</string>
+    <string name="around_the_globe">Around the Globe</string>
+    <string name="read_more_statistics">read more statistics</string>
+    <string name="global">Global</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="deaths">Deaths</string>
+    <string name="recovered">Recovered</string>
+</resources>
